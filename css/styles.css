@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+/*I love you*/
+
+/*I love u start*/
+p{    
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: paragraf-hide 20s steps(1,end);
+}
+p >i {
+    color: red;
+    animation: heart 1s linear infinite;
+}
+/*I love u end*/
+
+/*Containers*/
+#outer{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/Cinema-screen.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#inner{
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: countdown-hide 20s steps(1,end);
+}
+.inner-circle{
+    position: absolute;
+    border: 3px black solid;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 80%;
+    z-index: 999;
+    
+}
+.circle-1{
+    width: 100%;
+    height: 100%;
+}
+.circle-2{
+    width: 80%;
+    height: 80%;
+}
+#line-1{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 101%;
+    height: 50%;
+    border-bottom: 3px solid black;
+    opacity: 0.5;
+    z-index: 999;
+}
+#line-2{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 101%;
+    border-right: 3px solid black;
+    opacity: 0.5;
+    z-index: 999;
+}
+/* CLOCK AND NUMBERS STYLES*/
+#clock-circle-right{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100.1%;
+    border-radius: 0 250px 250px 0;
+    background-color: rgba(192,192,192,1);
+    transform-origin: left;
+    animation: main-animation 1s linear 10;
+}
+#clock-circle-left{
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 50.2%;
+    height: 100.1%;
+    border-radius: 200px 0 0 200px;
+    background-color: rgba(192,192,192,1);
+    animation: main-animation-additional 1s steps(1, end) 10;
+}
+#mask{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100.1%;
+    border-radius: 0 250px 250px 0;
+    background-color: white;
+    transform-origin: left;
+    z-index: 998;
+    animation: mask 1s steps(1, end) 10;
+}
+/* Numbers*/
+.inner-number{
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 12em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    opacity: 0;
+    animation: show-number 2s steps(1, end);
+}
+/*DELAYS*/
+.delay1{
+    animation-delay: 1s;
+}
+.delay2{
+    animation-delay: 2s;
+}
+.delay3{
+    animation-delay: 3s;
+}
+.delay4{
+    animation-delay: 4s;
+}
+.delay5{
+    animation-delay: 5s;
+}
+.delay6{
+    animation-delay: 6s;
+}
+.delay7{
+    animation-delay: 7s;
+}
+.delay8{
+    animation-delay: 8s;
+}
+.delay9{
+    animation-delay: 9s;
+}
+/* ANIMATIONS ----------------------------------- ANIMATIONS*/
+@keyframes heart {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+}
+
+@keyframes main-animation{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes main-animation-additional{
+    0%{
+        opacity: 1;
+    }
+    50%, 100%{
+        opacity: 0;
+    }
+}
+@keyframes mask{
+    0%{
+        opacity: 0;
+    }
+    50%, 100%{
+        opacity: 1;
+    }
+}
+@keyframes show-number{
+    0%{
+        opacity: 1;
+    }
+    50%, 100%{
+        opacity: 0;
+    }
+}
+@keyframes paragraf-hide{
+    0%{
+        opacity: 0;
+    }
+    50%, 100%{
+        opacity: 1;
+    }
+}
+@keyframes countdown-hide{
+    0%{
+        opacity: 1;
+    }
+    50%, 100%{
+        opacity: 0;
+    }
+}
+
+}
+
